@@ -16,3 +16,23 @@ body {
   flex-direction: column;
   box-sizing: border-box;
 }
+
+@theme {
+  --color-primary: #d2bbff;
+  --color-primary-container: #7c3aed;
+  --color-secondary: #4cd7f6;
+  --color-secondary-container: #03b5d3;
+  --color-surface: #0a0a0f;
+  --color-surface-container: #1f1f25;
+  --color-surface-container-high: #2a292f;
+  --color-on-surface: #e4e1e9;
+  --color-on-primary: #3f008e;
+  --color-on-secondary: #003640;
+  --color-background: #0a0a0f;
+  --color-on-background: #e4e1e9;
+  --color-outline: #958da1;
+  --color-error: #ffb4ab;
+
+  --font-headline: "Space Grotesk";
+  --font-body: "Inter";
+}
