@@ -1,12 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Sun, Moon } from "lucide-react";
 
 export default function Header() {
   const [dark, setDark] = useState(false);
 
-  function handleClick() {
-    //el prev es el valor anterior del estado, lo usamos para cambiarlo al contrario
-    setDark((prev) => !prev);
-  }
+  // escucha al estado del dark y cambia el fondo si es true o false
+  useEffect(() => {
+    const root = document.documentElement;
+
+    if (dark) {
+      root.classList.add("dark");
+      document.body.style.backgroundColor = "#1f1f25";
+    } else {
+      root.classList.remove("dark");
+      document.body.style.backgroundColor = "#ffffff";
+    }
+  }, [dark]);
 
   return (
     <>
@@ -20,13 +29,9 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <button
             className="p-2 text-slate-400 hover:bg-white/5 rounded-full transition-all duration-300 active:scale-95 opacity-80"
-            onClick={handleClick}
+            onClick={() => setDark((prev) => !prev)}
           >
-            <img
-              src={dark ? "../public/svg/sun.svg" : "../public/svg/moon.svg"}
-              alt={dark ? "sun icon" : "moon icon"}
-              className="w-5 h-5 invert"
-            />
+            {dark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
           </button>
         </div>
       </nav>
