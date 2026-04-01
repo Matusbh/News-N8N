@@ -1,11 +1,10 @@
 import { Search } from "lucide-react";
 import { useState } from "react";
-import useSearch from "../hooks/useSearch.js";
+import Dashboard from "./Dashboard.jsx";
 
-export default function SeaechBar() {
+export default function SeaechBar({ handleSearch, load }) {
   // Guardammos el input en un estado local
   const [keyword, setKeyword] = useState("");
-  const { load, handleSearch } = useSearch();
 
   function onSubmit(e) {
     //Eviamos que el formurmulario se recargue
