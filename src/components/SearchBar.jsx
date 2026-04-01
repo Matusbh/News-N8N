@@ -21,7 +21,7 @@ export default function SeaechBar() {
 
         <form
           onSubmit={onSubmit}
-          className="relative flex items-center bg-[#0e0e13] rounded-2xl p-2.5 border border-white/5 shadow-2xl"
+          className="relative flex items-center bg-background dark:bg-on-background  transition-all duration-300 rounded-2xl p-2.5 border border-white/5 shadow-2xl"
         >
           <span className="ml-6 text-slate-500 text-xl">
             <Search size={20} />
@@ -38,10 +38,10 @@ export default function SeaechBar() {
           <button
             type="submit"
             disabled={load}
-            className={`px-5 md:px-10 py-2 md:py-4 w-fit rounded-xl font-bold text-base tracking-tight transition-all active:scale-95 ${
+            className={`px-5 md:px-10 py-2 md:py-4 w-fit rounded-xl font-bold text-base tracking-tight transition-all active:scale-150  ${
               load
                 ? "bg-gray-700 text-gray-300 cursor-not-allowed"
-                : "bg-primary-container text-white hover:shadow-lg hover:shadow-violet-600/20"
+                : "bg-primary text-white hover:shadow-lg hover:shadow-violet-600/20"
             }`}
           >
             {load ? "Buscando..." : "Buscar"}

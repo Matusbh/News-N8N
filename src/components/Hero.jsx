@@ -4,9 +4,9 @@ import { Search, Workflow, Earth } from "lucide-react";
 export default function Hero() {
   return (
     <div className="mt-5">
-      <h1 className="text-5xl md:text-8xl font-bold font-headline tracking-tighter text-background dark:text-on-background">
+      <h1 className="text-5xl md:text-8xl font-bold font-headline tracking-tighter text-on-second-background/50  dark:text-background">
         Search News with{" "}
-        <span class="bg-linear-to-r from-primary-container to-secondary-container bg-clip-text text-transparent">
+        <span class="bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent">
           AI
         </span>
       </h1>
@@ -19,7 +19,7 @@ export default function Hero() {
       <div id="infoBars" class="flex gap-3.5 mt-10 p-2.5 flex-col md:flex-row">
         <div
           id="infoBar--1"
-          class="group rounded-2xl border border-white/10 bg-[#131318]/70 p-8 backdrop-blur-xl shadow-[0_0_15px_rgba(124,58,237,0.1)] transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-[0_0_25px_rgba(124,58,237,0.18)]"
+          class="group rounded-2xl border border-white/10 bg-bars-color/70 dark:bg-on-background/70 p-8 backdrop-blur-xl shadow-[0_0_15px_rgba(124,58,237,0.1)] transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-[0_0_25px_rgba(124,58,237,0.18)]"
         >
           <div class="flex flex-col items-start space-y-6">
             <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-400">
@@ -42,7 +42,7 @@ export default function Hero() {
 
         <div
           id="infoBar--2"
-          class="group rounded-2xl border border-white/10 bg-[#131318]/70 p-8 backdrop-blur-xl shadow-[0_0_15px_rgba(124,58,237,0.1)] transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-[0_0_25px_rgba(124,58,237,0.18)]"
+          class="group rounded-2xl border border-white/10 bg-bars-color/70 dark:bg-on-background/70 p-8 backdrop-blur-xl shadow-[0_0_15px_rgba(124,58,237,0.1)] transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-[0_0_25px_rgba(124,58,237,0.18)]"
         >
           <div class="flex flex-col items-start space-y-6">
             <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-400">
@@ -65,7 +65,7 @@ export default function Hero() {
 
         <div
           id="infoBar--3"
-          class="group rounded-2xl border border-white/10 bg-[#131318]/70 p-8 backdrop-blur-xl shadow-[0_0_15px_rgba(124,58,237,0.1)] transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-[0_0_25px_rgba(124,58,237,0.18)]"
+          class="group rounded-2xl border border-white/10 bg-bars-color/70 dark:bg-on-background/70 p-8 backdrop-blur-xl shadow-[0_0_15px_rgba(124,58,237,0.1)] transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-[0_0_25px_rgba(124,58,237,0.18)]"
         >
           <div class="flex flex-col items-start space-y-6">
             <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-400">

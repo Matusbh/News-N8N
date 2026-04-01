@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 body {
   margin: 0;
@@ -17,21 +18,36 @@ body {
 }
 
 @theme {
-  --color-primary: #d2bbff;
-  --color-primary-container: #7c3aed;
-  --color-secondary: #4cd7f6;
-  --color-secondary-container: #03b5d3;
-  --color-surface: #0a0a0f;
-  --color-surface-container: #1f1f25;
-  --color-surface-container-high: #2a292f;
-  --color-on-surface: #e4e1e9;
-  --color-on-primary: #3f008e;
-  --color-on-secondary: #003640;
-  --color-background: #0a0a0f;
-  --color-on-background: #e4e1e9;
-  --color-outline: #958da1;
-  --color-error: #ffb4ab;
+  --color-background: var(--background);
+  --color-on-background: var(--on-background);
+  --color-on-second-background: var(--background-dark-light);
+  --color-primary: var(--primary);
+  --color-primary-container: var(--primary-container);
+  --color-secondary: var(--secondary);
+  --color-secondary-container: var(--secondary-container);
+  --color-surface: var(--surface);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-on-surface: var(--on-surface);
+  --color-outline: var(--outline);
+  --color-bars-color: var(--nav-color);
 
   --font-headline: "Space Grotesk";
   --font-body: "Inter";
+}
+
+:root {
+  --background: #f8f9ff;
+  --on-background: #131318;
+  --background-dark-light: #1f1e25;
+  --primary: #7c3aed;
+  --primary-container: #ede9fe;
+  --secondary: #06b6d4;
+  --nav-color: #fdfdff;
+  --secondary-container: #03b5d3;
+  --surface: #ffffff;
+  --surface-container: #ffffff;
+  --surface-container-high: #f1f1f3;
+  --on-surface: #131318;
+  --outline: #89898e;
 }
