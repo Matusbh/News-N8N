@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function useSearch() {
   const [load, setLoad] = useState(false);
-  const [resultados, setresultados] = useState([]);
+  const [resultados, setResultados] = useState([]);
   const [error, setError] = useState("");
 
   async function handleSearch(word) {
@@ -12,7 +12,8 @@ export default function useSearch() {
       setError("");
 
       const searchData = await searchNews(word);
-      setresultados(searchData);
+
+      setResultados(searchData.articles ?? []);
     } catch (err) {
       setError("Error al buscar noticias: " + err.message);
     } finally {

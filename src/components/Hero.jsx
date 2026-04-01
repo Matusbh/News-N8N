@@ -24,7 +24,7 @@ export default function Hero() {
         handleSearch={handleSearch}
       />
 
-      {!error && (
+      {!error && !load && (!resultados || resultados.length === 0) && (
         <div
           id="infoBars"
           class="flex gap-3.5 mt-10 p-2.5 flex-col md:flex-row"

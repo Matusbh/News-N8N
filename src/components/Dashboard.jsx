@@ -1,10 +1,8 @@
-// Es el componente orquestador. Usa el hook useSearch, renderiza el SearchBar, y según el estado muestra: el spinner si está cargando, un mensaje de error si falló, o las tarjetas con los resultados.
-
-// Usuario escribe → SearchBar llama a handleSearch → useSearch hace el fetch a n8n → Dashboard recibe los resultados → ResultsGrid los muestra
-
 import SearchBar from "./SearchBar.jsx";
 import Spinner from "./Spinner.jsx";
 import Error from "./Error.jsx";
+import ResultGrid from "./ResultGrid.jsx";
+import Hero from "./Hero.jsx";
 
 export default function Dashboard({ resultados, load, error, handleSearch }) {
   return (
@@ -20,6 +18,11 @@ export default function Dashboard({ resultados, load, error, handleSearch }) {
             <Error message={error} />
           </div>
         )
+      }
+
+      {
+        //Si no hay error y no esta cargando, mostramos los resultados
+        !error && !load && <ResultGrid articulos={resultados} />
       }
     </div>
   );
