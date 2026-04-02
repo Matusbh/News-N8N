@@ -28,7 +28,7 @@ export default function Header() {
 
         <div className="flex items-center gap-4">
           <button
-            className="p-2 dark:text-slate-400 hover:bg-white/5 rounded-full transition-all duration-300 active:scale-200 opacity-80 "
+            className="p-2 dark:text-slate-400 hover:bg-white/5 rounded-full transition-all duration-300 hover:scale-150 active:scale-90 opacity-80 "
             onClick={() => setDark((prev) => !prev)}
           >
             {dark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}

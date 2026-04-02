@@ -1,8 +1,10 @@
+import { ImageOff } from "lucide-react";
+
 export default function ResultCard({ results }) {
   return (
     <article className="group flex flex-col rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-[0_0_25px_rgba(124,58,237,0.18)]">
       <img
-        src={results.image}
+        src={results.image || <ImageOff size={48} className="text-slate-400" />}
         alt={results.title}
         className="w-full h-full object-cover"
       />
