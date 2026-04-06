@@ -4,9 +4,9 @@ export default function ResultCard({ results }) {
   return (
     <article className="group flex flex-col rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-[0_0_25px_rgba(124,58,237,0.18)]">
       <img
-        src={results.image || <ImageOff size={48} className="text-slate-400" />}
+        src={results.image || "/photo-cancel.svg"}
         alt={results.title}
-        className="w-full h-full object-cover"
+        className={`w-full h-48 object-cover ${!results.image ? "dark:invert p-8 opacity-40" : ""}`}
       />
 
       <div className="flex flex-col flex-1 p-6 space-y-3">
