@@ -6,9 +6,13 @@ export default function ResultCard({ results }) {
       <img
         src={results.image || "/photo-cancel.svg"}
         alt={results.title}
-        className={`w-full h-48 object-cover ${!results.image ? "dark:invert p-8 opacity-40" : ""}`}
+        onError={(e) => {
+          e.currentTarget.src = "/photo-cancel.svg";
+          e.currentTarget.className =
+            "w-full h-48 object-contain dark:invert p-3 opacity-40";
+        }}
+        className={`w-full h-48 object-contain ${!results.image ? "dark:invert p-3 opacity-40" : ""}`}
       />
-
       <div className="flex flex-col flex-1 p-6 space-y-3">
         <h3 className="text-white font-bold text-lg leading-snug line-clamp-2">
           {results.title}
