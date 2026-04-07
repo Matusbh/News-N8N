@@ -2,19 +2,21 @@ import { ImageOff } from "lucide-react";
 
 export default function ResultCard({ results }) {
   return (
-    <article className="group flex flex-col rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-[0_0_25px_rgba(124,58,237,0.18)]">
+    <article className="group flex flex-col rounded-2xl border border-black/10 dark:border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-[0_0_25px_rgba(124,58,237,0.18)]">
       <img
         src={results.image || "/photo-cancel.svg"}
         alt={results.title}
         onError={(e) => {
           e.currentTarget.src = "/photo-cancel.svg";
           e.currentTarget.className =
-            "w-full h-48 object-contain  dark:invert p-3 opacity-40";
+            "w-full h-48 object-contain dark:invert p-3 opacity-40";
         }}
-        className={`w-full h-48 object-contain ${!results.image ? "dark:invert p-3 opacity-40" : ""}`}
+        className={`w-full h-48 object-cover ${
+          !results.image ? "object-contain dark:invert p-3 opacity-40" : ""
+        }`}
       />
       <div className="flex flex-col flex-1 p-6 space-y-3">
-        <h3 className="text-white font-bold text-lg leading-snug line-clamp-2">
+        <h3 className="text-black dark:text-white font-bold text-lg leading-snug line-clamp-2">
           {results.title}
         </h3>
         <p className="text-slate-400 text-sm leading-relaxed line-clamp-3 flex-1">
