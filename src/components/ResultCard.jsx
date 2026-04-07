@@ -9,7 +9,7 @@ export default function ResultCard({ results }) {
         onError={(e) => {
           e.currentTarget.src = "/photo-cancel.svg";
           e.currentTarget.className =
-            "w-full h-48 object-contain dark:invert p-3 opacity-40";
+            "w-full h-48 object-contain  dark:invert p-3 opacity-40";
         }}
         className={`w-full h-48 object-contain ${!results.image ? "dark:invert p-3 opacity-40" : ""}`}
       />
