@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="fill top-0 w-full flex justify-between items-center px-6 py-4 mx-auto bg-bars-color dark:bg-on-background/70  transition-all duration-300  backdrop-blur-xl border-b rounded-b-xl border-white/10 shadow-[0_0_15px_rgba(124,58,237,0.1)] z-50 mt-5">
+    <footer className="fill top-0 w-full flex justify-between items-center px-6 py-4 mx-auto bg-bars-color dark:bg-on-background/70  transition-all duration-300  backdrop-blur-xl border-t rounded-t-xl border-white/10 shadow-[0_0_15px_rgba(124,58,237,0.1)] z-50 mt-5">
       <div className="flex items-center gap-2">
         <h3 className="text-2xl font-bold tracking-tighter text-transparent bg-clip-text bg-linear-to-r  dark:bg-linear-to-r from-primary to-secondary">
           AutoDash
